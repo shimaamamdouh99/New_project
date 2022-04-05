@@ -1,15 +1,25 @@
 
-#a)find the nth occurance of a word in a string                                    #Note         #a)1:8     b)10 :        c) 50:         d):
-def find_nth_occurrence(substring, string, occurrence=1):                          #solution       8        48             72
+#a)find the nth occurance of a word in a string                                    #Note         #a)1:9     b)10 : 47       c) 50:69         d):
+def find_nth_occurrence(substring, string, occurrence=1):                          #solution         1           2             3
     i = -1
     for i in range(occurrence):
-        i = string.find(substring, i + 1)
-        if i == -1:
-            break
+     i = string.find(substring, i + 1)
+     if i == -1:
+          break
     return i
-
 #b)simple string matching  
-
+#solition 1
+def solve(a,b):
+    if a==b:
+        return True
+    if len(a)-1<=len(b):
+        if "*" in a:
+            return True 
+        else: 
+            return False
+    else: 
+        return False       
+#solution 2
 def solve (a,b):
     if a==b and '*' not in a:
         return True 
@@ -34,7 +44,7 @@ def solve (a,b):
                 return False 
     else: 
         return False
- 
+ #we can also use find,startwith,endwith method but i try not all cases handle 
 
 #c) Is it a palindrome?
 #Solution 1:
